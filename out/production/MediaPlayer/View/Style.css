@@ -1,0 +1,75 @@
+
+.mainpage{
+    -fx-border-color: black;
+    -fx-border-radius: 4;
+    -fx-background-color:  linear-gradient(to top, #2f0537, #49284e, #634a65, #7d6e7e, #979397);
+}
+.button{
+  -fx-effect: dropshadow(three-pass-box , white , 10 ,0,0,0);
+
+}
+.playbtn{
+   -fx-shape: "M150 0 L75 200 L225 200 Z";
+    -fx-border-color: black;
+}
+.stopbtn{
+    -fx-shape: "M 500 300 L 650 300 L 650 150 L 500 150 L 500 300 L 650 300 L 650 300 ";
+    -fx-border-color: black;
+}
+
+.nextbtn{
+
+    -fx-shape: "M150 0 L75 200 L225 200 Z";
+    -fx-border-radius: 10;
+    -fx-border-color: black;
+}
+
+.puasebtn{
+    -fx-shape: "M 696 96 L 696 252 L 696 96 L 636 96 L 636 252 L 756 252 L 756 96 Z";
+    -fx-border-radius: 10;
+    -fx-border-color: black;
+}
+
+.thirtybtn{
+    -fx-border-color: black;
+}
+
+.loopbtn{
+    -fx-border-radius: 1em;
+    -fx-border-color: black;
+}
+.xbtn{
+    -fx-border-radius: 8em;
+    -fx-border-color: black;
+}
+
+.mvbox{
+    -fx-background-color : #cccccc;
+}
+.table-view-music{
+    -fx-background-color: black;
+    -fx-border-color: purple;
+}
+.add-btn{
+    -fx-border-radius: 4em;
+    -fx-border-color: black;
+}
+.delete-btn{
+    -fx-border-radius: 4em;
+    -fx-border-color: black;
+}
+.mediaView{
+    -fx-border-color: black;
+}
+
+.equalizer{
+    -fx-background-color:linear-gradient(to top, #2d2d2d, #43576e, #1f8dab, #00c6ce, #27ffca);
+}
+.speed{
+    -fx-effect: dropshadow(three-pass-box ,black , 10 ,0,0,0);
+    -fx-border-color: black;
+
+}
+.menu-bar{
+    -fx-background-color: #cccccc;
+}

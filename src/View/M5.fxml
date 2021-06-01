@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.media.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="mainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="752.0" prefWidth="1307.0" styleClass="mainpage" stylesheets="@Style.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.MediaPlayerController">
+    <bottom>
+        <VBox prefHeight="79.0" prefWidth="973.0" BorderPane.alignment="CENTER_RIGHT">
+            <children>
+                <JFXSlider fx:id="timeS" onMouseDragged="#mouseD" onMousePressed="#mouseCS" value="-50.0">
+                    <padding>
+                        <Insets left="57.0" right="255.0" />
+                    </padding>
+                </JFXSlider>
+                <Label fx:id="timeLBL" prefHeight="21.0" prefWidth="110.0" text="          " textFill="WHITE">
+                    <padding>
+                        <Insets left="13.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets left="922.0" top="6.0" />
+                    </VBox.margin>
+                </Label>
+                <HBox alignment="CENTER" prefHeight="40.0" prefWidth="1124.0" spacing="24.0">
+                    <children>
+                  <JFXButton fx:id="randBTN" onAction="#randomF" styleClass="xbtn" text="Random" textFill="WHITE" />
+                        <JFXButton fx:id="fullBTN" onAction="#full" styleClass="xbtn" text="[    ]" textFill="WHITE" />
+                        <JFXRadioButton fx:id="loopBTN" onAction="#loopF" text="Loop" textFill="WHITE" />
+                        <JFXButton fx:id="thirtyP" layoutX="611.0" layoutY="15.0" onAction="#setThirtyP"
+                                   styleClass="thirtybtn" text="&lt;30&quot;" textFill="WHITE" />
+                        <JFXButton fx:id="previous" layoutX="658.0" layoutY="15.0" onAction="#beM"
+                                   rotate="-90.0" styleClass="nextbtn" text="  " />
+                        <JFXButton fx:id="stop" layoutX="706.0" layoutY="15.0" onAction="#stop"
+                                   styleClass="stopbtn" text="   " />
+                        <JFXButton fx:id="play" layoutX="753.0" layoutY="15.0" onAction="#pl"
+                                   rotate="90.0" styleClass="playbtn" text="    " />
+                        <JFXButton fx:id="pause" layoutX="801.0" layoutY="15.0" onAction="#pauseFu"
+                                   styleClass="puasebtn" text="  " />
+                        <JFXButton fx:id="nextBT" layoutX="848.0" layoutY="15.0" onAction="#nextM"
+                                   rotate="90.0" styleClass="nextbtn" text="  " />
+                        <JFXButton fx:id="nextThirty" layoutX="896.0" layoutY="15.0" onAction="#setNextThirty"
+                                   styleClass="thirtybtn" text="30&quot;&gt;" textFill="WHITE" />
+                        <VBox alignment="CENTER" prefHeight="40.0" prefWidth="152.0">
+                            <children>
+                                <JFXSlider fx:id="soundSlider" value="-50.0">
+                                    <VBox.margin>
+                                        <Insets top="22.0" />
+                                    </VBox.margin>
+                                </JFXSlider>
+                                <Label fx:id="soundLBL" prefHeight="21.0" prefWidth="101.0" textFill="WHITE" />
+                            </children>
+                        </VBox>
+                        <JFXToggleButton fx:id="mute" onAction="#muteMedia" prefHeight="60.0" prefWidth="110.0"
+                                         text="Mute" textFill="WHITE" />
+                    </children>
+                    <padding>
+                        <Insets bottom="3.0" right="150.0" />
+                    </padding>
+                    <VBox.margin>
+                        <Insets right="15.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </bottom>
+    <center>
+        <MediaView fx:id="mediaview" fitHeight="550.0" fitWidth="1000.0" onMousePressed="#mouseE"
+                   BorderPane.alignment="CENTER" />
+    </center>
+    <right>
+        <ListView fx:id="playList" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <padding>
+                <Insets left="13.0" />
+            </padding>
+            <contextMenu>
+                <ContextMenu>
+                    <items>
+                        <MenuItem fx:id="playM" mnemonicParsing="false" onAction="#playL" text="Play" />
+                        <MenuItem fx:id="deleteM" mnemonicParsing="false" onAction="#deleteFile" text="Delete" />
+                    </items>
+                </ContextMenu>
+            </contextMenu>
+        </ListView>
+    </right>
+    <top>
+        <MenuBar fx:id="menuBar" onMouseEntered="#ml" onMouseExited="#mE" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu fx:id="fileM" mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#addFileToList" text="Add" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" onAction="#setting" text="Setting">
+                    <items>
+                        <RadioMenuItem fx:id="settingM" mnemonicParsing="false" text="Dark" />
+                        <MenuItem fx:id="equalizer" mnemonicParsing="false" onAction="#equ" text="Equalizer" />
+                    </items>
+                </Menu>
+                <Menu fx:id="fileM1" mnemonicParsing="false">
+                    <graphic>
+                        <JFXComboBox fx:id="speed" focusColor="#9c30b2" promptText="Speed" />
+                    </graphic>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+</BorderPane>

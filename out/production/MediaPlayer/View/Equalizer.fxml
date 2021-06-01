@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="405.0" prefWidth="933.0" styleClass="equalizer" stylesheets="@Style.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.EqualizerController">
+   <children>
+      <HBox layoutX="300.0" layoutY="47.0" prefHeight="321.0" prefWidth="619.0" spacing="18.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="sefr" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="32" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="yek" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="64" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="55.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="dovom" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="125" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="100.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="seh" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="250" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="145.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="chahar" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="500" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="190.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="panj" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="1K" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="235.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="shesh" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="2K" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="280.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="haft" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="4K" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="325.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="hasht" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="8K" textFill="WHITE" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" layoutX="370.0" layoutY="10.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+               <children>
+                  <Slider fx:id="noh" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+                  <Label text="16K" textFill="WHITE" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox alignment="CENTER" layoutX="95.0" layoutY="21.0" prefHeight="321.0" prefWidth="45.0" spacing="20.0">
+         <children>
+            <Slider fx:id="asli" orientation="VERTICAL" prefHeight="228.0" prefWidth="18.0" value="50.0" />
+         </children>
+         <padding>
+            <Insets top="10.0" />
+         </padding>
+      </VBox>
+      <Label layoutX="166.0" layoutY="75.0" text="+12 dB" />
+      <Label layoutX="173.0" layoutY="171.0" text="0 dB" />
+      <Label layoutX="168.0" layoutY="279.0" text="-12 dB" />
+      <RadioButton fx:id="enable" layoutX="113.0" layoutY="21.0" mnemonicParsing="false" onAction="#enableF"
+                   text="Enable" />
+   </children>
+</AnchorPane>
