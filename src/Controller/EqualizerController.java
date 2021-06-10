@@ -50,8 +50,10 @@ public class EqualizerController implements Initializable {
     private Slider chahar;
 
 
-
-
+    /**
+     *
+     * @param event  ActionEvent
+     */
 
 
 
