@@ -1,5 +1,6 @@
 package Controller;
 
+import Model.MediaFile;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXRadioButton;
 import com.jfoenix.controls.JFXSlider;
@@ -22,6 +23,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.media.Media;
@@ -235,8 +237,7 @@ public class MediaPlayerController implements Initializable, EventHandler<KeyEve
     public void initialize(URL location, ResourceBundle resources) {
         addMediaToList();
         speedBox();
-
-
+        playList_click();
 
     }
 
@@ -669,8 +670,35 @@ public class MediaPlayerController implements Initializable, EventHandler<KeyEve
 
 
 
+    // item click lisener to play ==> 2 times
+    private void playList_click(){
+        playList.setOnMouseClicked(new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent event) {
+                if ( event.getClickCount() == 2 &&  event.getButton() == MouseButton.PRIMARY){ //  check out the count click and button clicked
+//                    playList.getSelectionModel().getSelectedItem()
+                    File file = (File) playList.getSelectionModel().getSelectedItem();
+                    System.out.println(file);
+                    if (mediaArrayList.size() != 0 ) {
+                        if (file.toURI().toString().contains("mp3") || file.toURI().toString().contains("mp4")) {
+                            Media media = new Media(file.toURI().toString());
 
+                            mediaPl = new MediaPlayer(media);
 
+                            mediaview.setMediaPlayer(mediaPl);
+                            setSoundOfMedia();
+                            timeSlider();
+                            mediaPl.play();
+                            tLBL();
+                            sLBL();
+
+                        }
+                    }
+                }
+
+            }
+        });
+    }
 
 
 
